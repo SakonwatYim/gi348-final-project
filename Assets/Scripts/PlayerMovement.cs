@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        action = new InputAction();
+        action = InputSystem.actions.FindAction("Move");
     }
     void Start()
     {
