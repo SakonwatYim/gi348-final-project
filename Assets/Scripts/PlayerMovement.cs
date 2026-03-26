@@ -1,29 +1,46 @@
+using System.Collections;
+using Unity.XR.GoogleVr;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Config")]
     [SerializeField] private float speed;
     
+    [Header("Dash")]
+    [SerializeField] private float dashSpeed = 15f;
+    [SerializeField] private float dashTime = 0.3f;
+    [SerializeField] private float transperency = 0.3f;
+    
+    private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2D;
     private InputAction action;
+    
     private Vector2 moveDirection;
+    private float currentSpeed;
+    private bool usingDash;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
         action = InputSystem.actions.FindAction("Move");
+        
     }
+    
     void Start()
     {
-        
+        currentSpeed = speed;
+        InputSystem.actions.FindAction("Dash").performed += context => Dash();
     }
 
     // Update is called once per frame
     void Update()
     {
         CaptureInput();
+        RoratePlayer();
     }
 
     private void FixedUpdate()
@@ -33,7 +50,48 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        rb2D.MovePosition(rb2D.position + moveDirection * (speed * Time.deltaTime));
+        rb2D.MovePosition(rb2D.position + moveDirection * (currentSpeed * Time.deltaTime));
+        
+    }
+
+    private void Dash()
+    {
+        if (usingDash)
+        {
+            return; 
+        }
+        
+        usingDash = true;
+        StartCoroutine(routine:IEDash());
+    }
+
+    private IEnumerator IEDash()
+    {
+        currentSpeed = dashSpeed;
+        ModifySpriteRendrer(transperency);
+        yield return new WaitForSeconds(dashTime);
+        currentSpeed = speed;
+        ModifySpriteRendrer(alpha:1f);
+        usingDash = false;
+    }
+
+    private void RoratePlayer()
+    {
+        if (moveDirection.x >= 0.1f)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (moveDirection.x <= 0f)
+        {
+            spriteRenderer.flipX = true;
+        }
+    }
+
+    private void ModifySpriteRendrer(float alpha) 
+    {
+        Color color = spriteRenderer.color;
+        color = new Color(color.r, color.g, color.b, alpha);
+        spriteRenderer.color = color;
     }
 
     private void CaptureInput()
