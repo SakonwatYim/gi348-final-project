@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - Walls
+  - Wall
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -11,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Room
   - 
   - 
   - 
@@ -41,8 +45,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor
+    uniqueID: 4009551019
+    locked: 0
+  - name: Walls
+    uniqueID: 2266107137
+    locked: 0
+  - name: Prop
+    uniqueID: 487489505
+    locked: 0
   - name: Player
     uniqueID: 40864479
+    locked: 0
+  - name: UI
+    uniqueID: 2805186263
     locked: 0
   m_RenderingLayers:
   - Default
