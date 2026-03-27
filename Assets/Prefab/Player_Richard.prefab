@@ -103,13 +103,15 @@ GameObject:
   - component: {fileID: 2836861353564736193}
   - component: {fileID: 3506115757361350260}
   - component: {fileID: 5842017581249828968}
+  - component: {fileID: 2648365958085335250}
+  - component: {fileID: 7720770111338954423}
   m_Layer: 0
   m_Name: Player_Richard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5769415006362292170
 Transform:
   m_ObjectHideFlags: 0
@@ -192,6 +194,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2648365958085335250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742958533021723559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182381687ce5b8418f2edb476a78cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  playerConfig: {fileID: 11400000, guid: 4f2b84c9976422f4c8ff0d4b17659e1a, type: 2}
+--- !u!114 &7720770111338954423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742958533021723559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ed47048fdd214aa9adb110f10c2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
+  playerConfig: {fileID: 11400000, guid: 4f2b84c9976422f4c8ff0d4b17659e1a, type: 2}
 --- !u!1 &6660667695619392485
 GameObject:
   m_ObjectHideFlags: 0

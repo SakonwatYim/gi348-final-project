@@ -194,6 +194,8 @@ GameObject:
   - component: {fileID: 7317952882156045929}
   - component: {fileID: 5156681716563791533}
   - component: {fileID: 4479973788884504462}
+  - component: {fileID: 8383918265324636825}
+  - component: {fileID: 2536982870514691219}
   m_Layer: 0
   m_Name: Player_Shadowblade
   m_TagString: Untagged
@@ -283,3 +285,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8383918265324636825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237527882373221459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182381687ce5b8418f2edb476a78cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  playerConfig: {fileID: 11400000, guid: 9ed946872f21d3b479e31535ed2a7496, type: 2}
+--- !u!114 &2536982870514691219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237527882373221459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ed47048fdd214aa9adb110f10c2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
+  playerConfig: {fileID: 11400000, guid: 9ed946872f21d3b479e31535ed2a7496, type: 2}

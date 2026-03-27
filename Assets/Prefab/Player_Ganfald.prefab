@@ -103,13 +103,15 @@ GameObject:
   - component: {fileID: 2363397579148234393}
   - component: {fileID: 7072841964760531128}
   - component: {fileID: 6756773875640856045}
+  - component: {fileID: 7576821338137195136}
+  - component: {fileID: 1120357956172402628}
   m_Layer: 0
   m_Name: Player_Ganfald
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3677241258987352255
 Transform:
   m_ObjectHideFlags: 0
@@ -192,6 +194,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7576821338137195136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109407560095754666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182381687ce5b8418f2edb476a78cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  playerConfig: {fileID: 11400000, guid: 28a57a7f91ff75a42b27233072bc595f, type: 2}
+--- !u!114 &1120357956172402628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109407560095754666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ed47048fdd214aa9adb110f10c2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
+  playerConfig: {fileID: 11400000, guid: 28a57a7f91ff75a42b27233072bc595f, type: 2}
 --- !u!1 &7487744372570448864
 GameObject:
   m_ObjectHideFlags: 0

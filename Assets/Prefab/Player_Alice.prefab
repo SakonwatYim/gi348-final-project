@@ -12,13 +12,15 @@ GameObject:
   - component: {fileID: 1879569538853435595}
   - component: {fileID: 632271637611493988}
   - component: {fileID: 8022153502297100698}
+  - component: {fileID: 8627081070330500452}
+  - component: {fileID: 1703620977529324598}
   m_Layer: 0
   m_Name: Player_Alice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4320825439832676560
 Transform:
   m_ObjectHideFlags: 0
@@ -101,6 +103,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8627081070330500452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119033878777618656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182381687ce5b8418f2edb476a78cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  playerConfig: {fileID: 11400000, guid: 93a1f70f00eb2d346acccfac09ca56ea, type: 2}
+--- !u!114 &1703620977529324598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119033878777618656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ed47048fdd214aa9adb110f10c2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
+  playerConfig: {fileID: 11400000, guid: 93a1f70f00eb2d346acccfac09ca56ea, type: 2}
 --- !u!1 &6075918897014550783
 GameObject:
   m_ObjectHideFlags: 0

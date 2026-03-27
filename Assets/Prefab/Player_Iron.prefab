@@ -103,13 +103,15 @@ GameObject:
   - component: {fileID: 2984632965465328219}
   - component: {fileID: 4335889384430544764}
   - component: {fileID: 5016710722106051752}
+  - component: {fileID: 2454986274118236104}
+  - component: {fileID: 4146051604175663533}
   m_Layer: 0
   m_Name: Player_Iron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1772715330363050599
 Transform:
   m_ObjectHideFlags: 0
@@ -192,6 +194,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2454986274118236104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065860892586899118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3182381687ce5b8418f2edb476a78cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  playerConfig: {fileID: 11400000, guid: a174e7160a596e042a82d31164cdc1d0, type: 2}
+--- !u!114 &4146051604175663533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065860892586899118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ed47048fdd214aa9adb110f10c2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
+  playerConfig: {fileID: 11400000, guid: a174e7160a596e042a82d31164cdc1d0, type: 2}
 --- !u!1 &3868889889486690735
 GameObject:
   m_ObjectHideFlags: 0
