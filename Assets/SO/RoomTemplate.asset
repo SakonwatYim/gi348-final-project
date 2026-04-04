@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b2c5d68af2e264a8d686b461ab1e26, type: 3}
+  m_Name: RoomTemplate
+  m_EditorClassIdentifier: Assembly-CSharp::RoomTemplate
+  Template:
+  - {fileID: 2800000, guid: be852182fa5ebea41b607893d67b038d, type: 3}
+  - {fileID: 2800000, guid: a4e433e5d91804a47920479c71991b73, type: 3}
+  - {fileID: 2800000, guid: daeb93d93639b9e49bf09df7904d26be, type: 3}
+  - {fileID: 2800000, guid: cd55b4d1d9e93504a9f779771cf6e2ef, type: 3}
+  - {fileID: 2800000, guid: e708d47177ec442408a8760ed5c1a670, type: 3}
+  - {fileID: 2800000, guid: 0c178471b9a5ea7478a4a4699c5c6b66, type: 3}
+  - {fileID: 2800000, guid: f7af246a41bc0fd45890b2552655a083, type: 3}
+  - {fileID: 2800000, guid: 896e40fb6f0118543bcfaa3bb6e7323c, type: 3}
+  - {fileID: 2800000, guid: 98d78a4e8583e3240899e42a9d108d63, type: 3}
+  - {fileID: 2800000, guid: cce3664ea1894be498b8ad0a22a4135a, type: 3}
+  - {fileID: 2800000, guid: 10f04f6d13695654283dbca31fdfde9b, type: 3}
+  - {fileID: 2800000, guid: f31ca55264db9bc46a5b9e6ed583acd2, type: 3}
+  - {fileID: 2800000, guid: e72962e6cb28a774ca07c24f10dc7b0a, type: 3}
+  - {fileID: 2800000, guid: f28032ce671d5774e9360cc6e32e1af9, type: 3}
+  - {fileID: 2800000, guid: 2108a456c5668284b9898cb604d52427, type: 3}
+  - {fileID: 2800000, guid: 12a8319f141d49b4dae1e5929bbff905, type: 3}
+  - {fileID: 2800000, guid: 0b92af58d8b1c64468390d938e48f00c, type: 3}
+  - {fileID: 2800000, guid: a3ef3472b4e557444968224445f44a0e, type: 3}
+  PropsData:
+  - Name: Box 1
+    PropColor: {r: 0.13333334, g: 0.1254902, b: 0.20392157, a: 1}
+    PropPrefab: {fileID: 4978163643371379879, guid: 8e7c48866b5d3034e9f7986ebb0375d7, type: 3}
+  - Name: Box 2
+    PropColor: {r: 0.15294118, g: 0.31764707, b: 0.5372549, a: 1}
+    PropPrefab: {fileID: 2981711583227187082, guid: db478bec191d5d2499c38f2bed626b9f, type: 3}
+  - Name: Box 3
+    PropColor: {r: 0.9176471, g: 0.42352945, b: 0.42352945, a: 1}
+    PropPrefab: {fileID: 4121251057314493740, guid: 01526dc725dc868469a523f134d9d813, type: 3}
+  - Name: Box 4
+    PropColor: {r: 0.8235294, g: 0.8392157, b: 0.8745098, a: 1}
+    PropPrefab: {fileID: 4269945557135889684, guid: 3413f981e8e97404eb33f7a20947c4fb, type: 3}
+  - Name: Spikes
+    PropColor: {r: 0.32156864, g: 0.3764706, b: 0.4862745, a: 1}
+    PropPrefab: {fileID: 8956766887329534509, guid: 034033591b5dda04eae9e2dd51003734, type: 3}
