@@ -220,13 +220,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5742960557829198913, guid: 993e8c8ff6af9b244bd705456550fea2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 842210893306347892}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 993e8c8ff6af9b244bd705456550fea2, type: 3}
 --- !u!4 &6416459860638267501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5742960557829198913, guid: 993e8c8ff6af9b244bd705456550fea2, type: 3}
   m_PrefabInstance: {fileID: 1637269624411679788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1879931308306624096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6416459860638267501}
+    m_Modifications:
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391121183649623017, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+      propertyPath: m_Name
+      value: Portal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+--- !u!4 &842210893306347892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1271978586072231700, guid: 5928e0e2b6b708b4d9ef2444d92d6400, type: 3}
+  m_PrefabInstance: {fileID: 1879931308306624096}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3048847797813218937
 PrefabInstance:
@@ -236,6 +313,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6307488986474154634}
     m_Modifications:
+    - target: {fileID: -3174770373742910360, guid: 933edea504791ca488d4787125780bf3, type: 3}
+      propertyPath: roomType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1160718434345588774, guid: 933edea504791ca488d4787125780bf3, type: 3}
       propertyPath: m_Name
       value: Room_1C_N - Entrance

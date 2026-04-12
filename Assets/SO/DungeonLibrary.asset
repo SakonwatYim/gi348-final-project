@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7207d630cc082684d98e308f7c8b4811, type: 3}
+  m_Name: DungeonLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonLibrary
+  Levels:
+  - Name: Level1
+    Dungeons:
+    - {fileID: 1944092448343920185, guid: 49394a70660aa6e4480847d92f24e21c, type: 3}
+    - {fileID: 1316660620939367975, guid: b84abfff61a9f1f4888374aceb9d0201, type: 3}
+    - {fileID: 8837209901578451922, guid: 9b0677347f3b6874e97603cd9c414e02, type: 3}
+    - {fileID: 599299478362230518, guid: afe07924379cdd046a288ebbf1466d7a, type: 3}
+    - {fileID: 3883315035876612879, guid: 7784798fec1ceb245a199497b7657eb0, type: 3}
+  DoorNS: {fileID: 3602338897011409854, guid: f54c0b683d1d22b4e8c45587beb4b14b, type: 3}
+  DoorWE: {fileID: 481138882000536236, guid: 9e0d50e45b0364240b8087c793f04121, type: 3}

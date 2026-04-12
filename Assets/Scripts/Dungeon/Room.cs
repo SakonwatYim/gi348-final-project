@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -12,6 +13,8 @@ public enum RoomType
 }
 public class Room : MonoBehaviour
 {
+    public static event Action<Room> OnPlayeEnterEvent;
+
     [Header("Config")]
     [SerializeField] private bool useDebug;
     [SerializeField] private RoomType roomType ;
@@ -19,12 +22,21 @@ public class Room : MonoBehaviour
     [Header("Grid")]
     [SerializeField] private Tilemap extraTilemap;
 
+    [Header("Doors")]
+    [SerializeField] private Transform[] posDoorNS;
+    [SerializeField] private Transform[] posDoorWE;
+    public RoomType RoomType => roomType;
+
+    public bool RoomCompleted { get; set; }
+
     // Positionn (Key) - Free/Not Free
     private Dictionary<Vector3, bool> tiles = new Dictionary<Vector3, bool>();
+    private List<Door> doorList = new List<Door>(); 
 
     private void Start()
     {
         GeTiles();
+        CreateDoors();
         GenerateRoomUsingTemplate();
     }
 
@@ -50,6 +62,50 @@ public class Room : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void CloseDoors()
+    {
+        for (int i = 0; i < doorList.Count; i++)
+        {
+            doorList[i].ShowCloseAnimtion();
+        }
+    } 
+
+    public void OpenDoors()
+    {
+        for (int i = 0; i < doorList.Count; i++)
+        {
+            doorList[i].ShowOpenAnimtion();
+        }
+    }
+
+    private void CreateDoors()
+    {
+        if (posDoorNS.Length > 0)
+        { 
+            for (int i = 0; i < posDoorNS.Length; i++)
+            {
+                RegisterDoor(LevelManager.Instance.DungeonLibrary.DoorNS, posDoorNS[i]);
+            }
+
+        }
+
+        if (posDoorWE.Length > 0)
+        {
+            for (int i = 0; i < posDoorWE.Length; i++)
+            {
+                RegisterDoor(LevelManager.Instance.DungeonLibrary.DoorWE, posDoorWE[i]);
+            }
+        }
+    }
+
+    private void RegisterDoor(GameObject doorPrefab,Transform objTransform)
+    {
+       GameObject doorGO = Instantiate(doorPrefab, objTransform.position,Quaternion.identity , objTransform);
+
+        Door door = doorGO.GetComponent<Door>();
+        doorList.Add(door);
     }
 
     private void GenerateRoomUsingTemplate()
@@ -89,6 +145,23 @@ public class Room : MonoBehaviour
     {
         return roomType == RoomType.RoomEntrance || roomType == RoomType.RoomFree;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (NormalRoom())
+        {
+            return;
+        }
+
+        if (other.CompareTag("Player"))
+        {
+            if(OnPlayeEnterEvent != null)
+            {
+                OnPlayeEnterEvent.Invoke(this);
+            }
+        }
+    }
+
 
     private void OnDrawGizmosSelected()
     {
