@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashSpeed = 15f;
     [SerializeField] private float dashTime = 0.3f;
     [SerializeField] private float transperency = 0.3f;
-    
+
+    public Vector2 MoveDirection => moveDirection;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2D;
     private InputAction action;
@@ -20,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     private float currentSpeed;
     private bool usingDash;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
 
     private void Awake()
     {

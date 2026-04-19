@@ -612,7 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141517832312001933}
   - component: {fileID: 8464731257488854996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Corrider_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}

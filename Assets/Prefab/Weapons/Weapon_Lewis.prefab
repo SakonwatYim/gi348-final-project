@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8677946034852828313}
-  - component: {fileID: 4611510779077437147}
   - component: {fileID: 7938319991750463977}
+  - component: {fileID: 2644717656098717898}
   m_Layer: 0
   m_Name: Weapon_Lewis
   m_TagString: Untagged
@@ -35,18 +35,6 @@ Transform:
   - {fileID: 7527332705960872200}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4611510779077437147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2294692074893865480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ab01a4f0eb24a42bf3f98d263513e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Weapon
 --- !u!95 &7938319991750463977
 Animator:
   serializedVersion: 7
@@ -69,6 +57,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2644717656098717898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2294692074893865480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b910d5daf576464daf1eb1006ec93a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunWeapon
+  shootPos: {fileID: 7527332705960872200}
+  itemWeapon: {fileID: 11400000, guid: 780975bde4541f941bb3ef189793342a, type: 2}
+  projectilePrefab: {fileID: 0}
 --- !u!1 &7042906860238529302
 GameObject:
   m_ObjectHideFlags: 0

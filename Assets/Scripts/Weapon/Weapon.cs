@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Config")]
+    [SerializeField] protected Transform shootPos;
+    [SerializeField] protected ItemWeapon itemWeapon;
+
+    private Animator animator;
+
+    private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void PlayShootAnimation()
     {
-        
+        animator.SetTrigger("Shoot");
+    }
+
+    public virtual void UseWeapon()
+    {
+
     }
 }

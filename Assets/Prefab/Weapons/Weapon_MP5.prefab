@@ -131,8 +131,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3623675607389395739}
-  - component: {fileID: 6510753400015314281}
   - component: {fileID: 2896467279320906937}
+  - component: {fileID: 894030541662653585}
   m_Layer: 0
   m_Name: Weapon_MP5
   m_TagString: Untagged
@@ -157,18 +157,6 @@ Transform:
   - {fileID: 8182492344922319597}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6510753400015314281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9053646363137819075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ab01a4f0eb24a42bf3f98d263513e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Weapon
 --- !u!95 &2896467279320906937
 Animator:
   serializedVersion: 7
@@ -191,3 +179,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &894030541662653585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053646363137819075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b910d5daf576464daf1eb1006ec93a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunWeapon
+  shootPos: {fileID: 8182492344922319597}
+  itemWeapon: {fileID: 11400000, guid: 1ccd8e175a440cc4385c6151beccee1a, type: 2}
+  projectilePrefab: {fileID: 0}

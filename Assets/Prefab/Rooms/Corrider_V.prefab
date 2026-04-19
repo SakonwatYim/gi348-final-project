@@ -615,7 +615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443980323234657056}
   - component: {fileID: 4903531607255397151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Corrider_V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
