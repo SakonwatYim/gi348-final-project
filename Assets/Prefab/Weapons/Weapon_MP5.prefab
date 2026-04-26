@@ -193,4 +193,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GunWeapon
   shootPos: {fileID: 8182492344922319597}
   itemWeapon: {fileID: 11400000, guid: 1ccd8e175a440cc4385c6151beccee1a, type: 2}
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 2245938442602611044, guid: ed77a72e5c972434e934da8f50f611a6, type: 3}

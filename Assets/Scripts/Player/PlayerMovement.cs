@@ -95,11 +95,18 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer.color = color;
     }
 
+    public void FaceRightDirection()
+    {
+        spriteRenderer.flipX = false;
+    }
+
     private void CaptureInput()
     {
         moveDirection = action.ReadValue<Vector2>().normalized;
     }
     
+    
+
     private void OnEnable()
     {
         action.Enable();

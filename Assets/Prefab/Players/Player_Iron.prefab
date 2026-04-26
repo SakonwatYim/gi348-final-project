@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1277687576544157926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462358885417806260}
+  m_Layer: 0
+  m_Name: WeaponPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462358885417806260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277687576544157926}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00399971, y: -0.3819999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1772715330363050599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2960062361676047889
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 40864479
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 632363174, guid: 791786ebf52efec41830295993056fd4, type: 3}
@@ -102,11 +133,12 @@ GameObject:
   - component: {fileID: 1772715330363050599}
   - component: {fileID: 2984632965465328219}
   - component: {fileID: -7660397407064785467}
-  - component: {fileID: 4335889384430544764}
   - component: {fileID: 5016710722106051752}
+  - component: {fileID: 4335889384430544764}
   - component: {fileID: 2454986274118236104}
   - component: {fileID: 4146051604175663533}
-  m_Layer: 0
+  - component: {fileID: 2462466010403718795}
+  m_Layer: 7
   m_Name: Player_Iron
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -122,12 +154,13 @@ Transform:
   m_GameObject: {fileID: 3065860892586899118}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -0.774, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6802375158784036930}
   - {fileID: 461055273745744024}
+  - {fileID: 1462358885417806260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2984632965465328219
@@ -203,22 +236,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
---- !u!114 &4335889384430544764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3065860892586899118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a58db365c0b55b44b24301def6f0f78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 10
-  dashSpeed: 25
-  dashTime: 0.4
-  transperency: 0.1
 --- !u!95 &5016710722106051752
 Animator:
   serializedVersion: 7
@@ -241,6 +258,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4335889384430544764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065860892586899118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a58db365c0b55b44b24301def6f0f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  speed: 10
+  dashSpeed: 25
+  dashTime: 0.4
+  transperency: 0.1
 --- !u!114 &2454986274118236104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +300,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
   playerConfig: {fileID: 11400000, guid: a174e7160a596e042a82d31164cdc1d0, type: 2}
+--- !u!114 &2462466010403718795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065860892586899118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a49959044b54d4691c80b410ab983f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
+  weaponPos: {fileID: 1462358885417806260}
 --- !u!1 &3868889889486690735
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +391,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 40864479
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 189779373, guid: 30e61325498a72a438118e91b7315309, type: 3}

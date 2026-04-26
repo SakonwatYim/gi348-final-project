@@ -23,3 +23,7 @@ MonoBehaviour:
   MaxEnergy: 150
   CriticalChance: 10
   CriticalDamage: 50
+  Unlocked: 1
+  UnlockCost: 0
+  UngradeCost: 100
+  UdgradeMultiplier: 50

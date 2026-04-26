@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da9f680d52f54448b562ad2e73e3b57, type: 3}
+  m_Name: ChestItems_Level_1
+  m_EditorClassIdentifier: Assembly-CSharp::ChestItems
+  AvilableItems:
+  - {fileID: 1819266769194068539, guid: baee3b937dad6544bad4a605e9d5463e, type: 3}
+  - {fileID: 1819266769194068539, guid: 01761e6143fb8cf469ec0151336e9c86, type: 3}
+  - {fileID: 1819266769194068539, guid: a228e4c5b19094d449ba32b1e66606c4, type: 3}
+  - {fileID: 1819266769194068539, guid: 62b102bc6f4162e4f9ae9d7d2aab1ca8, type: 3}
+  - {fileID: 1819266769194068539, guid: f27d097f1387f314abffcc372ee8aeda, type: 3}
+  - {fileID: 1819266769194068539, guid: 871d6c448aee10744ae0e12b45302dcd, type: 3}
+  - {fileID: 1819266769194068539, guid: 2b1d086106b2928489780866d7a5f958, type: 3}
+  - {fileID: 1819266769194068539, guid: 52e0c9c446ff3e54ebc179be7fad1f6f, type: 3}

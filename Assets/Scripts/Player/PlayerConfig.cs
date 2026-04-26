@@ -17,5 +17,27 @@ public class PlayerConfig : ScriptableObject
     public float MaxEnergy;
     public float CriticalChance;
     public float CriticalDamage;
-    
+
+    [Header("Upgrade Values")]
+    public float HealthMaxUpgrade;
+    public float ArmorMaxUpgrade;
+    public float EnegyMaxUpgrade;
+    public float CriticalMaxUpgrade;
+
+    [Header("Extra")]
+    public bool Unlocked;
+    public int UnlockCost;
+    public int UngradeCost;
+    [Range(0, 100f)]
+    public int UdgradeMultiplier;
+
+
+    public void ResetPlayerStats()
+    {
+        CurrentHealth = MaxHealth;
+        Armor = MaxArmor;
+        Energy = MaxEnergy;
+    }
+
+
 }

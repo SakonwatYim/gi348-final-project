@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 40864479
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 366279270, guid: 791786ebf52efec41830295993056fd4, type: 3}
@@ -102,11 +102,12 @@ GameObject:
   - component: {fileID: 3677241258987352255}
   - component: {fileID: 2363397579148234393}
   - component: {fileID: -7392042795750602228}
-  - component: {fileID: 7072841964760531128}
   - component: {fileID: 6756773875640856045}
+  - component: {fileID: 7072841964760531128}
   - component: {fileID: 7576821338137195136}
   - component: {fileID: 1120357956172402628}
-  m_Layer: 0
+  - component: {fileID: 3127565615405957638}
+  m_Layer: 7
   m_Name: Player_Ganfald
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -122,12 +123,13 @@ Transform:
   m_GameObject: {fileID: 6109407560095754666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.2260001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9044696538442523852}
   - {fileID: 5421392944883425198}
+  - {fileID: 1254108654013592245}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2363397579148234393
@@ -203,22 +205,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
---- !u!114 &7072841964760531128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109407560095754666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a58db365c0b55b44b24301def6f0f78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 10
-  dashSpeed: 25
-  dashTime: 0.4
-  transperency: 0.1
 --- !u!95 &6756773875640856045
 Animator:
   serializedVersion: 7
@@ -241,6 +227,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7072841964760531128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109407560095754666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a58db365c0b55b44b24301def6f0f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  speed: 10
+  dashSpeed: 25
+  dashTime: 0.4
+  transperency: 0.1
 --- !u!114 &7576821338137195136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +269,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
   playerConfig: {fileID: 11400000, guid: 28a57a7f91ff75a42b27233072bc595f, type: 2}
+--- !u!114 &3127565615405957638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109407560095754666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a49959044b54d4691c80b410ab983f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
+  weaponPos: {fileID: 1254108654013592245}
 --- !u!1 &7487744372570448864
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +360,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 40864479
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 189779373, guid: 30e61325498a72a438118e91b7315309, type: 3}
@@ -358,3 +373,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &8534652777309358316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1254108654013592245}
+  m_Layer: 0
+  m_Name: WeaponPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1254108654013592245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8534652777309358316}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.382, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3677241258987352255}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

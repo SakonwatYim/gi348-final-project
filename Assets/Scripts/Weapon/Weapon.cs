@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected Transform shootPos;
     [SerializeField] protected ItemWeapon itemWeapon;
 
+    public ItemWeapon ItemWeapon => itemWeapon;
     private Animator animator;
 
     private void Awake()
@@ -19,6 +20,10 @@ public class Weapon : MonoBehaviour
     }
 
     public virtual void UseWeapon()
+    {
+
+    }
+    public virtual void DestoryWeapon()
     {
 
     }

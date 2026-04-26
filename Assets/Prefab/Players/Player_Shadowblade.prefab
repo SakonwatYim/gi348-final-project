@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 40864479
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 944828250, guid: 791786ebf52efec41830295993056fd4, type: 3}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 40864479
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 189779373, guid: 30e61325498a72a438118e91b7315309, type: 3}
@@ -344,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 5429986775116381450}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.371, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -361,11 +361,12 @@ GameObject:
   - component: {fileID: 6109843082859932141}
   - component: {fileID: 7317952882156045929}
   - component: {fileID: 6971561535340531197}
-  - component: {fileID: 5156681716563791533}
   - component: {fileID: 4479973788884504462}
+  - component: {fileID: 5156681716563791533}
   - component: {fileID: 8383918265324636825}
   - component: {fileID: 2536982870514691219}
-  m_Layer: 0
+  - component: {fileID: 6815719766506030188}
+  m_Layer: 7
   m_Name: Player_Shadowblade
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -464,22 +465,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
---- !u!114 &5156681716563791533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8237527882373221459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a58db365c0b55b44b24301def6f0f78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 10
-  dashSpeed: 25
-  dashTime: 0.4
-  transperency: 0.1
 --- !u!95 &4479973788884504462
 Animator:
   serializedVersion: 7
@@ -502,6 +487,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5156681716563791533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237527882373221459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a58db365c0b55b44b24301def6f0f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  speed: 10
+  dashSpeed: 25
+  dashTime: 0.4
+  transperency: 0.1
 --- !u!114 &8383918265324636825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,3 +529,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerEnergy
   playerConfig: {fileID: 11400000, guid: 9ed946872f21d3b479e31535ed2a7496, type: 2}
+--- !u!114 &6815719766506030188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237527882373221459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a49959044b54d4691c80b410ab983f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapon
+  weaponPos: {fileID: 5760954349877590837}

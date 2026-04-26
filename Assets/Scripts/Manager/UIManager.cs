@@ -2,10 +2,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
-    public static UIManager Instance;
-
     [Header("References")] // For now
     [SerializeField] private PlayerConfig playerConfig;
     
@@ -19,11 +17,6 @@ public class UIManager : MonoBehaviour
 
     [Header("UI Extra")]
     [SerializeField] private CanvasGroup fadePanel;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     // Update is called once per frame
     void Update()

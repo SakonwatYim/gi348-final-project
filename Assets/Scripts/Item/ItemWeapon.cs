@@ -24,9 +24,17 @@ public class ItemWeapon : ItemData
 
     [Header("Setting")]
     public float Damage;
-    public float RequiredRnergy;
+    public float RequiredEnergy;
     public float TimeBetweenshots;
     public float MinSpread;
     public float MaxSpread;
 
+    [Header("Weapon")]
+    public Weapon WeaponPrefab;
+
+    public override void Pickup()
+    {
+        LevelManager.Instance.Player
+            .GetComponent<PlayerWeapon>().EquipWeapon(WeaponPrefab);
+    }
 }
