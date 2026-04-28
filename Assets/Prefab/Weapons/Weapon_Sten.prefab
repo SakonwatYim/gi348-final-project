@@ -109,7 +109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680800585
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6496103308122340220, guid: 8c7cf951f2279e549a82e70250cf89e4, type: 3}
@@ -193,4 +193,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GunWeapon
   shootPos: {fileID: 4985873801503235908}
   itemWeapon: {fileID: 11400000, guid: 636964b8689f33a4197e5de61023df16, type: 2}
-  projectilePrefab: {fileID: 2245938442602611044, guid: da397d0ffc69ffe4887f561f1cc52635, type: 3}
+  projectilePrefab: {fileID: 8638197290495512305, guid: 4f4d5898d5a675f479514bced6ca17c2, type: 3}

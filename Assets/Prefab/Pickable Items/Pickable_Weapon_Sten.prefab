@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 144326424131870615}
   - component: {fileID: 3104321255215627029}
   - component: {fileID: 8202837785513362827}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pickable_Weapon_Sten
   m_TagString: Untagged
   m_Icon: {fileID: 0}

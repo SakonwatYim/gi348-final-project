@@ -1,0 +1,33 @@
+using UnityEngine;
+
+public class CharacterWeapon : MonoBehaviour
+{
+    [Header("Config")]
+    //[SerializeField] private Weapon initialWeapon; สร้างตอนเริ่ม
+    [SerializeField] protected Transform weaponPos;
+
+    protected Weapon currentWeapon;
+
+    protected virtual void Awake()
+    {
+        
+    }
+
+    protected void RotateWeapon(Vector3 direction)
+    {
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (direction.x > 0f) //หันขวา
+        {
+            weaponPos.localScale = Vector3.one;
+            currentWeapon.transform.localScale = Vector3.one;
+        }
+        else //หันซ้าย
+        {
+            weaponPos.localScale = new Vector3(-1, 1, 1);
+            currentWeapon.transform.localScale = new Vector3(-1, -1, 1);
+        }
+
+        currentWeapon.transform.eulerAngles = new Vector3(0, 0, angle);
+
+    }
+}

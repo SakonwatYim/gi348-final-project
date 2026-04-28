@@ -20,6 +20,13 @@ MonoBehaviour:
     - {fileID: 8837209901578451922, guid: 9b0677347f3b6874e97603cd9c414e02, type: 3}
     - {fileID: 599299478362230518, guid: afe07924379cdd046a288ebbf1466d7a, type: 3}
     - {fileID: 3883315035876612879, guid: 7784798fec1ceb245a199497b7657eb0, type: 3}
+    Enemies:
+    - {fileID: 7933438994960461565, guid: 7c263b05b6a11e646a874f7d78fdceea, type: 3}
+    - {fileID: 1569258572628519790, guid: 36c8720cb10b6f64fb2b00f78696632e, type: 3}
+    - {fileID: 2867062992088616907, guid: b1864626e9265ff40abec7177dbce5c1, type: 3}
+    - {fileID: 2155781103682163786, guid: a7a4cb49b10d6444cac24bc6b3c2de21, type: 3}
+    MinEnemyPerRoom: 3
+    MaxEnemyPerRoom: 6
     ChestItems: {fileID: 11400000, guid: 4bb8b7ad321882743850d34229a598bb, type: 2}
   DoorNS: {fileID: 3602338897011409854, guid: f54c0b683d1d22b4e8c45587beb4b14b, type: 3}
   DoorWE: {fileID: 481138882000536236, guid: 9e0d50e45b0364240b8087c793f04121, type: 3}

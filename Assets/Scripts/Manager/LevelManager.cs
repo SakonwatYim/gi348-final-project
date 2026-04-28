@@ -6,27 +6,70 @@ using UnityEngine;
 
 public class LevelManager : Singleton<LevelManager>
 {
-    [Header("Temp")]
-    [SerializeField] private GameObject player;
-
     [Header("Config")]
     [SerializeField] private RoomTemplate roomTemplate;
     [SerializeField] private DungeonLibrary dungeonLibrary;
 
-    public GameObject Player => player;
+    
     public RoomTemplate RoomTemplate => roomTemplate;
     public DungeonLibrary DungeonLibrary => dungeonLibrary;
+    public GameObject SelectedPlayer { get; set; }
 
     private Room currentRoom;
     private int currentLevelIndex;
     private int currentDungeonIndex;
+    private int enemyCounter;
     private GameObject currentDungeonGO;
 
     private List<GameObject> currentLevelChestItems = new List<GameObject>();
 
+    protected override void Awake()
+    {
+        base.Awake();
+        CreatePlayer();
+
+    }
+
     private void Start()
     {
         CreateDungeon();
+    }
+
+    private void CreatePlayer()
+    {
+        if (GameManager.Instance.Player != null)
+        {
+            SelectedPlayer = Instantiate(GameManager.Instance.Player.PlayerPrefab);
+        }
+    }
+
+    private void CreateEnemies()
+    {
+        int enemyAmount = GetEnemyAmount();
+        enemyCounter = enemyAmount;
+        for (int i = 0; i < enemyAmount; i++)
+        {
+            Vector3 tilePos = currentRoom.GetAvailableTilePos();
+            EnemyBrain enemy = Instantiate(GetEnemy(), tilePos, 
+                Quaternion.identity, currentRoom.transform);
+            enemy.RoomParent = currentRoom;
+        }
+    }
+
+    private EnemyBrain GetEnemy()
+    {
+        EnemyBrain[] enemies = dungeonLibrary.Levels[currentLevelIndex].Enemies;
+        int randomIndex = Random.Range(0, enemies.Length);
+        EnemyBrain randomEnemy = enemies[randomIndex];
+        return randomEnemy;
+    }
+
+    private int GetEnemyAmount()
+    {
+        int amount = 
+            Random.Range(dungeonLibrary.Levels[currentLevelIndex].MinEnemyPerRoom,
+            dungeonLibrary.Levels[currentLevelIndex].MaxEnemyPerRoom);
+        return amount;
     }
 
     private void CreateDungeon()
@@ -65,9 +108,9 @@ public class LevelManager : Singleton<LevelManager>
 
         if (entranceRoom != null)
         {
-            if (player != null)
+            if (SelectedPlayer != null)
             {
-                player.transform.position = entranceRoom.transform.position;
+                SelectedPlayer.transform.position = entranceRoom.transform.position;
             }
         }
     }
@@ -94,6 +137,15 @@ public class LevelManager : Singleton<LevelManager>
         if (currentRoom.RoomCompleted == false)
         {
             currentRoom.CloseDoors();
+            switch(currentRoom.RoomType)
+            {
+                case RoomType.RoomEnemy:
+                    CreateEnemies();
+                    break;
+                case RoomType.RoomBoss:
+                    break;
+                
+            }
         }
     }
 

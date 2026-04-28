@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PlayerConfig : ScriptableObject
 {
+
+
     [Header("Data")]
     public int Level;
     public string Name;
@@ -21,7 +23,7 @@ public class PlayerConfig : ScriptableObject
     [Header("Upgrade Values")]
     public float HealthMaxUpgrade;
     public float ArmorMaxUpgrade;
-    public float EnegyMaxUpgrade;
+    public float EnergyMaxUpgrade;
     public float CriticalMaxUpgrade;
 
     [Header("Extra")]
@@ -31,6 +33,8 @@ public class PlayerConfig : ScriptableObject
     [Range(0, 100f)]
     public int UdgradeMultiplier;
 
+    [Header("Prefab")]
+    public GameObject PlayerPrefab;
 
     public void ResetPlayerStats()
     {

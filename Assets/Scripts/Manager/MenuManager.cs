@@ -23,7 +23,7 @@ public class MenuManager : Singleton<MenuManager>
 
     [Header("Bars")]
     [SerializeField] private Image healthBar;
-    [SerializeField] private Image amrorBar;
+    [SerializeField] private Image armorBar;
     [SerializeField] private Image energyBar;
     [SerializeField] private Image criticalBar;
 
@@ -67,6 +67,7 @@ public class MenuManager : Singleton<MenuManager>
         {
             currentPlayer.GetComponent<PlayerMovement>().enabled = true;
             currentPlayer.Config.ResetPlayerStats();
+            GameManager.Instance.Player = currentPlayer.Config;
             ClosePlayerPanel();
         }
 
@@ -83,6 +84,17 @@ public class MenuManager : Singleton<MenuManager>
         }
     }
 
+    public void UnlockPlayer()
+    {
+        if (CoinManager.Instance.Coins >= currentPlayer.Config.UnlockCost)
+        {
+            CoinManager.Instance.RemoveCoins(currentPlayer.Config.UnlockCost);
+            currentPlayer.Config.Unlocked = true;
+            VerifiyPlayer();
+            ShowPlayerStats();
+        }
+    }
+
     private void UpgradePlayerStat()
     {
         PlayerConfig config = currentPlayer.Config;
@@ -92,6 +104,12 @@ public class MenuManager : Singleton<MenuManager>
         config.MaxEnergy += 10f;
         config.CriticalChance += 2f;
         config.CriticalDamage += 5f;
+
+        config.MaxHealth = Mathf.Min(config.MaxHealth, config.HealthMaxUpgrade);
+        config.MaxArmor = Mathf.Min(config.MaxArmor, config.ArmorMaxUpgrade);
+        config.MaxEnergy = Mathf.Min(config.MaxEnergy, config.EnergyMaxUpgrade);
+        config.MaxHealth = Mathf.Min(config.CriticalChance, config.CriticalMaxUpgrade);
+
 
         int upgrade = config.UngradeCost;
         config.UngradeCost = upgrade + (upgrade * (config.UdgradeMultiplier / 100));
@@ -110,6 +128,16 @@ public class MenuManager : Singleton<MenuManager>
 
         playerUnlockCostTMP.text = currentPlayer.Config.UnlockCost.ToString();
         playerUpgradeCostTMP.text = currentPlayer.Config.UngradeCost.ToString();
+
+        //Update Bars
+        healthBar.fillAmount = currentPlayer.Config.MaxHealth
+            / currentPlayer.Config.HealthMaxUpgrade;
+        armorBar.fillAmount = currentPlayer.Config.MaxArmor
+            / currentPlayer.Config.ArmorMaxUpgrade;
+        energyBar.fillAmount = currentPlayer.Config.MaxEnergy
+            / currentPlayer.Config.EnergyMaxUpgrade;
+        criticalBar.fillAmount = currentPlayer.Config.CriticalChance
+            / currentPlayer.Config.CriticalMaxUpgrade;
     }
 
     private void VerifiyPlayer()

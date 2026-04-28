@@ -2,26 +2,27 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
-public class PlayerWeapon : MonoBehaviour
+public class PlayerWeapon : CharacterWeapon
 {
-    [Header("Config")]
-    //[SerializeField] private Weapon initialWeapon; สร้างตอนเริ่ม
-    [SerializeField] private Transform weaponPos;
+    [Header("Player")]
+    [SerializeField] private PlayerConfig config;
+    private int weaponIndex;
+    private Weapon[] equippedWeapons = new Weapon[2];
 
     private InputAction actions;
     private PlayerEnergy playerEnergy;
     private PlayerMovement playerMovement;
-    private Weapon currentWeapon;
-
+   
     private Coroutine weaponCooutine;
     private ItemText weaponNameText;
 
-    private int weaponIndex;
-    private Weapon[] equippedWeapons = new Weapon[2];
+    
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         actions = new InputAction();
         playerEnergy = GetComponent<PlayerEnergy>();
         playerMovement = GetComponent<PlayerMovement>();
@@ -37,10 +38,7 @@ public class PlayerWeapon : MonoBehaviour
     private void Update()
     {
         if (currentWeapon == null) return;
-        if (playerMovement.MoveDirection != Vector2.zero)
-        {
-            RotateWeapon(playerMovement.MoveDirection);
-        }
+        RotatePlayerWeapon();
     }
 
     private void CreateWeapon(Weapon weaponPrefab)
@@ -48,6 +46,8 @@ public class PlayerWeapon : MonoBehaviour
         currentWeapon = Instantiate(weaponPrefab,weaponPos.position,
             Quaternion.identity, weaponPos);
         equippedWeapons[weaponIndex] = currentWeapon;
+        equippedWeapons[weaponIndex].CharacterParent = this;
+        ShowCurrentWeaponName();
     }
 
     public void EquipWeapon(Weapon weapon)
@@ -89,6 +89,14 @@ public class PlayerWeapon : MonoBehaviour
         ShowCurrentWeaponName();
     }
 
+    private void RotatePlayerWeapon()
+    {
+        if (playerMovement.MoveDirection != Vector2.zero)
+        {
+            RotateWeapon(playerMovement.MoveDirection);
+        }
+    }
+
     private void ShootWeapon()
     {
         if (currentWeapon == null)
@@ -104,23 +112,19 @@ public class PlayerWeapon : MonoBehaviour
         playerEnergy.UseEnergy(currentWeapon.ItemWeapon.RequiredEnergy);
     }
 
-    private void RotateWeapon(Vector3 direction)
+    public float GetDamgeUsingCriticalChance()
     {
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (direction.x > 0f) //หันขวา
+        float damage = currentWeapon.ItemWeapon.Damage;
+        float porc = Random.Range(0f, 100f);
+        if (porc < config.CriticalChance)
         {
-            weaponPos.localScale = Vector3.one;
-            currentWeapon.transform.localScale = Vector3.one;
-        }
-        else //หันซ้าย
-        {
-            weaponPos.localScale = new Vector3(-1,1,1);
-            currentWeapon.transform.localScale =  new Vector3(-1,-1,1);
+            damage = damage * config.CriticalDamage / 100f + damage;
+            return damage;
         }
 
-        currentWeapon.transform.eulerAngles = new Vector3(0,0,angle);
-
+        return damage;
     }
+
 
     private void ShowCurrentWeaponName()
     {

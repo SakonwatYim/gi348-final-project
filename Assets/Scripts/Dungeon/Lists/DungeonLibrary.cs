@@ -18,5 +18,9 @@ public class level
 {
     public string Name;
     public GameObject[] Dungeons;
+    public EnemyBrain[] Enemies;
+    public int MinEnemyPerRoom;
+    public int MaxEnemyPerRoom;
     public ChestItems ChestItems;
+    
 }

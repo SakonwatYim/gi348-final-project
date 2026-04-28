@@ -18,9 +18,9 @@ TagManager:
   - Room
   - Player
   - Projectile
-  - 
-  - 
-  - 
+  - Enemy
+  - Obstacle
+  - EnemyProjectile
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Item
     uniqueID: 3194276365
+    locked: 0
+  - name: Enemy
+    uniqueID: 1746016741
     locked: 0
   - name: Player
     uniqueID: 40864479

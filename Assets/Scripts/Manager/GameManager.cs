@@ -8,6 +8,8 @@ public class GameManager : PersistentSingleleton<GameManager>
     [SerializeField] private Color weaponEpicColor;
     [SerializeField] private Color weaponLegendaryColor;
 
+    public PlayerConfig Player { get; set; }
+
     public Color GetWeaponNameColor(WeaponRarity rarity)
     {
         switch (rarity)

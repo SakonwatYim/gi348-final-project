@@ -19,11 +19,16 @@ MonoBehaviour:
   MaxHealth: 5
   Armor: 7
   MaxArmor: 7
-  Energy: 250
-  MaxEnergy: 250
+  Energy: 180
+  MaxEnergy: 180
   CriticalChance: 30
   CriticalDamage: 60
+  HealthMaxUpgrade: 10
+  ArmorMaxUpgrade: 12
+  EnergyMaxUpgrade: 240
+  CriticalMaxUpgrade: 45
   Unlocked: 0
   UnlockCost: 1000
   UngradeCost: 800
   UdgradeMultiplier: 50
+  PlayerPrefab: {fileID: 2119033878777618656, guid: cb56b49a6b270fc42acbed2f3c5f5cad, type: 3}

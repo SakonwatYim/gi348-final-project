@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GunWeapon
   shootPos: {fileID: 6775961848433156986}
   itemWeapon: {fileID: 11400000, guid: 1e8a9897ed8d5ab4e8967be6f6f9637a, type: 2}
-  projectilePrefab: {fileID: 2245938442602611044, guid: b00746e91343e1f4ab507eb15a42b852, type: 3}
+  projectilePrefab: {fileID: 1938850417049730132, guid: 81155875233d5e44aa2d64583566937a, type: 3}
 --- !u!1 &6783666815762615966
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680800585
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4691415427121581748, guid: 8c7cf951f2279e549a82e70250cf89e4, type: 3}
