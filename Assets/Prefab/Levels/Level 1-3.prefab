@@ -250,6 +250,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7706129235411876998}
     m_Modifications:
+    - target: {fileID: -775175957979470975, guid: 252a426cc9230264db8e4df82d74f8c2, type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1057838004772956243, guid: 252a426cc9230264db8e4df82d74f8c2, type: 3}
       propertyPath: m_Name
       value: Room_1C_E
@@ -540,6 +544,10 @@ PrefabInstance:
     - target: {fileID: 3332165896098186891, guid: 63b257307ef399a4395e0a5568be7c16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177931603533648064, guid: 63b257307ef399a4395e0a5568be7c16, type: 3}
+      propertyPath: roomType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8621526940590284298, guid: 63b257307ef399a4395e0a5568be7c16, type: 3}
       propertyPath: m_Name

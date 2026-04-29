@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ef57f3e000ade458140e820b42dffb, type: 3}
   m_Name: Weapon_Sword
   m_EditorClassIdentifier: Assembly-CSharp::ItemWeapon
-  ID: Glock
+  ID: Sword
   Icon: {fileID: 2114216582, guid: 8c7cf951f2279e549a82e70250cf89e4, type: 3}
-  WeaponType: 1
+  WeaponType: 0
   Rarity: 0
   Damage: 2
   RequiredEnergy: 0

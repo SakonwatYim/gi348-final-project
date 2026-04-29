@@ -65,6 +65,12 @@ public class Room : MonoBehaviour
         }
     }
 
+    public void SetRoomCompleted()
+    {
+        RoomCompleted = true;
+        OpenDoors();
+    }
+
     public void CloseDoors()
     {
         for (int i = 0; i < doorList.Count; i++)

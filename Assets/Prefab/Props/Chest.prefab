@@ -207,5 +207,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chest
   itemPos: {fileID: 7261066065827259808}
-  usePredefineChest: 1
-  predefineChest: {fileID: 628150946268925045, guid: 122423cedeb2ad544a449835c7bfd0ef, type: 3}
+  usePredefineChest: 0
+  predefineChest: {fileID: 0}

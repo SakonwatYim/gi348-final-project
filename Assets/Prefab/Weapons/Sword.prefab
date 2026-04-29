@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680800585
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1154447352, guid: 8c7cf951f2279e549a82e70250cf89e4, type: 3}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 1970916684807275597}
   - component: {fileID: 8138149063481605346}
   - component: {fileID: 5925749538750332329}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0023308396, y: 0.49252874}
+  m_Offset: {x: 0.16994703, y: 0.47479415}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -170,7 +170,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2004446, y: 1.0156358}
+  m_Size: {x: 1.5450003, y: 1.4260623}
   m_EdgeRadius: 0
 --- !u!95 &8138149063481605346
 Animator:

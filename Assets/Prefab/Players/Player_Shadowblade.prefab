@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 10
-  dashSpeed: 25
-  dashTime: 0.4
+  dashSpeed: 15
+  dashTime: 1
   transperency: 0.1
 --- !u!114 &8383918265324636825
 MonoBehaviour:
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f237a9d96ebc8b340a45154d857af986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  rangeDetection: 4
+  rangeDetection: 6
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1024

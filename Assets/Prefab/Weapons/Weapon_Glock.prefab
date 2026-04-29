@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1443491379930311107}
   - component: {fileID: 1919261431832295552}
   - component: {fileID: 2846803126304979330}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Weapon_Glock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680800585
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2114216582, guid: 8c7cf951f2279e549a82e70250cf89e4, type: 3}

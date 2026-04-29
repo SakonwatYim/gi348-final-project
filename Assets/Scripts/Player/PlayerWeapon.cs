@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class PlayerWeapon : CharacterWeapon
 {
+    public static event Action<Weapon> OnWeaponUIUdateEvent;
+
     [Header("Player")]
     [SerializeField] private PlayerConfig config;
     private int weaponIndex;
@@ -13,6 +15,7 @@ public class PlayerWeapon : CharacterWeapon
 
     private InputAction actions;
     private PlayerEnergy playerEnergy;
+    private PlayerDetection detection;
     private PlayerMovement playerMovement;
    
     private Coroutine weaponCooutine;
@@ -24,6 +27,7 @@ public class PlayerWeapon : CharacterWeapon
     {
         base.Awake();
         actions = new InputAction();
+        detection = GetComponentInChildren<PlayerDetection>();
         playerEnergy = GetComponent<PlayerEnergy>();
         playerMovement = GetComponent<PlayerMovement>();
     }
@@ -48,6 +52,7 @@ public class PlayerWeapon : CharacterWeapon
         equippedWeapons[weaponIndex] = currentWeapon;
         equippedWeapons[weaponIndex].CharacterParent = this;
         ShowCurrentWeaponName();
+        OnWeaponUIUdateEvent?.Invoke(currentWeapon);
     }
 
     public void EquipWeapon(Weapon weapon)
@@ -87,6 +92,7 @@ public class PlayerWeapon : CharacterWeapon
         currentWeapon.gameObject.SetActive(true);
         ResetWeaponForChange();
         ShowCurrentWeaponName();
+        OnWeaponUIUdateEvent?.Invoke(currentWeapon);
     }
 
     private void RotatePlayerWeapon()
@@ -94,6 +100,12 @@ public class PlayerWeapon : CharacterWeapon
         if (playerMovement.MoveDirection != Vector2.zero)
         {
             RotateWeapon(playerMovement.MoveDirection);
+        }
+        if (detection.EnemyTarget != null)
+        {
+            Vector3 dirToEnemy = detection.EnemyTarget.
+                transform.position - transform.position;
+            RotateWeapon(dirToEnemy);
         }
     }
 

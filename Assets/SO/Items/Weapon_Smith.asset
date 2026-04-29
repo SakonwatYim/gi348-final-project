@@ -16,9 +16,9 @@ MonoBehaviour:
   Icon: {fileID: -236168045, guid: 8c7cf951f2279e549a82e70250cf89e4, type: 3}
   WeaponType: 1
   Rarity: 0
-  Damage: 1
-  RequiredEnergy: 0
-  TimeBetweenshots: 0
+  Damage: 2
+  RequiredEnergy: 1
+  TimeBetweenshots: 1
   MinSpread: -5
   MaxSpread: 5
   WeaponPrefab: {fileID: -2167820245260107228, guid: 6b7f2ee0eb4879148bfaf2ebe2292fac, type: 3}

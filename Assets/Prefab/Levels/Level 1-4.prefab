@@ -216,6 +216,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4177931603533648064, guid: 63b257307ef399a4395e0a5568be7c16, type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8621526940590284298, guid: 63b257307ef399a4395e0a5568be7c16, type: 3}
       propertyPath: m_Name
       value: Room_4C
@@ -428,6 +432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2487222042122885000}
     m_Modifications:
+    - target: {fileID: 1156663430903515936, guid: a9bc70d2ae98af54789df34767775cde, type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6674052849221043066, guid: a9bc70d2ae98af54789df34767775cde, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -620,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3206644529880649305, guid: 252a426cc9230264db8e4df82d74f8c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53
+      value: -52
       objectReference: {fileID: 0}
     - target: {fileID: 3206644529880649305, guid: 252a426cc9230264db8e4df82d74f8c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -743,7 +751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5742960557829198913, guid: 993e8c8ff6af9b244bd705456550fea2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.999998
+      value: 25.999998
       objectReference: {fileID: 0}
     - target: {fileID: 5742960557829198913, guid: 993e8c8ff6af9b244bd705456550fea2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -865,6 +873,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2487222042122885000}
     m_Modifications:
+    - target: {fileID: -3174770373742910360, guid: 933edea504791ca488d4787125780bf3, type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1160718434345588774, guid: 933edea504791ca488d4787125780bf3, type: 3}
       propertyPath: m_Name
       value: Room_1C_N (1)

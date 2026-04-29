@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, ITakeDamage
 {
+    public static event Action OnPlayerDeadEvent;
     [Header("Player")]
     [SerializeField] private PlayerConfig playerConfig;
 
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour, ITakeDamage
 
     public void TakeDamage(float amount)
     {
+        DamageManager.Instance.ShowDamage(amount, transform);
         if (playerConfig.Armor > 0)
         {
             // Break armor
@@ -48,6 +50,7 @@ public class PlayerHealth : MonoBehaviour, ITakeDamage
 
     private void PlayerDead()
     {
+        OnPlayerDeadEvent?.Invoke();
         Destroy(gameObject);
     }
 }

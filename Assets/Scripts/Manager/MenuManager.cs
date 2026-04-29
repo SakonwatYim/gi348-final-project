@@ -33,6 +33,7 @@ public class MenuManager : Singleton<MenuManager>
     [SerializeField] private GameObject selectButton;
 
     private SelectablePlayer currentPlayer;
+    private bool playerSelected;
     private void Start()
     {
         CreatePlayer();
@@ -63,12 +64,15 @@ public class MenuManager : Singleton<MenuManager>
 
     public void SelectPlayer()
     {
+        if (playerSelected) return;
+
         if (currentPlayer.Config.Unlocked)
         {
             currentPlayer.GetComponent<PlayerMovement>().enabled = true;
             currentPlayer.Config.ResetPlayerStats();
             GameManager.Instance.Player = currentPlayer.Config;
             ClosePlayerPanel();
+            playerSelected = true;
         }
 
     }

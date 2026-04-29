@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerDetection : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField] private float rangeDetection;

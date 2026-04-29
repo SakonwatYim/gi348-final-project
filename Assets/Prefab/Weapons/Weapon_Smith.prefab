@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7342240673737551421}
   - component: {fileID: 3278733940455636938}
   - component: {fileID: -2167820245260107228}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Weapon_Smith
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680800585
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -236168045, guid: 8c7cf951f2279e549a82e70250cf89e4, type: 3}

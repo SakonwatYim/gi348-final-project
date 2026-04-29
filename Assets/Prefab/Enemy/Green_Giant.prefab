@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b4fdebcb439bf48b73ae15b169846e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionDetectPlayer
-  rangeDetection: 4
+  rangeDetection: 6
   playerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -340,4 +340,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c310f1106c4c1b4790b1f6b0c70e252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionAttack
-  timeBtwAttacks: 0.5
+  timeBtwAttacks: 1

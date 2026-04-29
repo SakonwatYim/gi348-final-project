@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 7219545844095740505}
   - component: {fileID: 7957751960704611503}
   - component: {fileID: 179374778190703277}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnemyWeapon_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunWeapon
   shootPos: {fileID: 8883834474324340963}
-  itemWeapon: {fileID: 11400000, guid: 1d2ccf8c56fadb348820fc8d0be1b4fb, type: 2}
+  itemWeapon: {fileID: 11400000, guid: 85cf40a858f02ff45b0bceee4e8fac76, type: 2}
   projectilePrefab: {fileID: 2462208580421557778, guid: 17f7c87f71db5b74fbc4df396f59f160, type: 3}
 --- !u!95 &179374778190703277
 Animator:
@@ -182,7 +182,7 @@ Animator:
   m_GameObject: {fileID: 8666157384746401844}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 596d1462df6e3db499d325cdb6420662, type: 2}
+  m_Controller: {fileID: 22100000, guid: 425411e7dbf77404f9191ad0ef54126f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

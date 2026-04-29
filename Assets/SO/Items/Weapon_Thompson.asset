@@ -17,7 +17,7 @@ MonoBehaviour:
   WeaponType: 1
   Rarity: 2
   Damage: 3
-  RequiredEnergy: 0
+  RequiredEnergy: 2
   TimeBetweenshots: 0
   MinSpread: -3
   MaxSpread: 3
