@@ -38,7 +38,12 @@ public class Room : MonoBehaviour
     {
         GeTiles();
         CreateDoors();
-        GenerateRoomUsingTemplate();
+
+        // Don't generate template props for boss rooms.
+        if (roomType != RoomType.RoomBoss)
+        {
+            GenerateRoomUsingTemplate();
+        }
     }
 
     private void GeTiles()

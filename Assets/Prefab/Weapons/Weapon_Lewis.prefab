@@ -72,6 +72,8 @@ MonoBehaviour:
   shootPos: {fileID: 7527332705960872200}
   itemWeapon: {fileID: 11400000, guid: 780975bde4541f941bb3ef189793342a, type: 2}
   projectilePrefab: {fileID: 5207291312586307348, guid: 102736821a3f9bb489983451f58bd8b4, type: 3}
+  shootClip: {fileID: 8300000, guid: 2c84cf9f38c60d249a8006cf9c92eb79, type: 3}
+  shootVolume: 0.053
 --- !u!1 &7042906860238529302
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MeleeWeapon : Weapon
 {
-    private bool targetInRange; 
+    private bool targetInRange;
     private ITakeDamage target;
 
     public override void UseWeapon()
@@ -16,6 +16,12 @@ public class MeleeWeapon : Weapon
                 {
                     //Enemy
                     target.TakeDamage(player.GetDamgeUsingCriticalChance());
+
+                    // play enemy hit SFX
+                    if (AudioManager.Instance != null)
+                    {
+                        AudioManager.Instance.PlayEnemyHit();
+                    }
                 }
                 else
                 {
@@ -24,7 +30,7 @@ public class MeleeWeapon : Weapon
                 }
             }
         }
-    }       
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -33,7 +39,6 @@ public class MeleeWeapon : Weapon
         {
             target = entity;
             targetInRange = true;
-            
         }
     }
 

@@ -8,7 +8,7 @@ public class Chest : MonoBehaviour
     [Header("Item")]
     [SerializeField] private bool usePredefineChest;
     [SerializeField] private GameObject predefineChest;
-    
+
     private Animator animator;
     private bool openedChest;
     void Awake()
@@ -34,8 +34,14 @@ public class Chest : MonoBehaviour
         if (openedChest) return;
         if (other.CompareTag("Player") == false) return;
         animator.SetTrigger("OpenChest");
+
+        // play open chest SFX
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayOpenChest();
+        }
+
         ShowItem();
-        openedChest = true; 
-        
+        openedChest = true;
     }
 }

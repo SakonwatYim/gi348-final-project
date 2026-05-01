@@ -189,6 +189,11 @@ public class LevelManager : Singleton<LevelManager>
                     break;
                 case RoomType.RoomBoss:
                     CreateBoss();
+                    // switch to boss BGM
+                    if (AudioManager.Instance != null)
+                    {
+                        AudioManager.Instance.PlayBossBGM();
+                    }
                     break;
                 
             }
@@ -217,6 +222,12 @@ public class LevelManager : Singleton<LevelManager>
                 {
                     Vector3 tilePos = currentRoom.GetAvailableTilePos();
                     Instantiate(dungeonLibrary.Portal, tilePos, Quaternion.identity, currentRoom.transform);
+
+                    // switch back to normal BGM when boss dies
+                    if (AudioManager.Instance != null)
+                    {
+                        AudioManager.Instance.PlayMainBGM();
+                    }
                 }
             }
             

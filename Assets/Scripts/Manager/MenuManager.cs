@@ -20,6 +20,7 @@ public class MenuManager : Singleton<MenuManager>
     [SerializeField] private TextMeshProUGUI coinsTMP;
     [SerializeField] private TextMeshProUGUI playerUpgradeCostTMP;
     [SerializeField] private TextMeshProUGUI playerUnlockCostTMP;
+    [SerializeField] private GameObject tutorialUI;
 
     [Header("Bars")]
     [SerializeField] private Image healthBar;
@@ -109,14 +110,15 @@ public class MenuManager : Singleton<MenuManager>
         config.CriticalChance += 2f;
         config.CriticalDamage += 5f;
 
+        // Clamp to their respective maxima
         config.MaxHealth = Mathf.Min(config.MaxHealth, config.HealthMaxUpgrade);
         config.MaxArmor = Mathf.Min(config.MaxArmor, config.ArmorMaxUpgrade);
         config.MaxEnergy = Mathf.Min(config.MaxEnergy, config.EnergyMaxUpgrade);
-        config.MaxHealth = Mathf.Min(config.CriticalChance, config.CriticalMaxUpgrade);
+        config.CriticalChance = Mathf.Min(config.CriticalChance, config.CriticalMaxUpgrade);
 
-
+        // Avoid integer division when calculating new upgrade cost
         int upgrade = config.UngradeCost;
-        config.UngradeCost = upgrade + (upgrade * (config.UdgradeMultiplier / 100));
+        config.UngradeCost = (int)(upgrade + (upgrade * (config.UdgradeMultiplier / 100f)));
     }
 
     private void ShowPlayerStats()
@@ -172,5 +174,14 @@ public class MenuManager : Singleton<MenuManager>
         public PlayerMovement player;
         public Transform CreationPos;
 
+    }
+
+    public void ShowTutorial()
+    {
+        tutorialUI.SetActive(true);
+    }
+     public void CloseTutorial()
+    {
+        tutorialUI.SetActive(false);
     }
 }

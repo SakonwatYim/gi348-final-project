@@ -25,6 +25,12 @@ public class PickableItem : MonoBehaviour
     {
         if (canInteract)
         {
+            // play pickup SFX from AudioManager if available
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayPickUp();
+            }
+
             item.Pickup();
             Destroy(gameObject);
         }

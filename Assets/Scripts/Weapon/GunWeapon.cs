@@ -8,6 +8,12 @@ public class GunWeapon : Weapon
     {
         PlayShootAnimation();
 
+        // play shoot SFX
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayShoot();
+        }
+
         // Create porjectile
         Projectile projectile = Instantiate(projectilePrefab);
         projectile.transform.position = shootPos.position;
@@ -16,13 +22,12 @@ public class GunWeapon : Weapon
         {
             projectile.Damage = player.GetDamgeUsingCriticalChance();
         }
-        else 
+        else
         {
             projectile.Damage = itemWeapon.Damage;
         }
         float randomSpread = Random.Range(itemWeapon.MinSpread, itemWeapon.MaxSpread);
         projectile.transform.rotation = Quaternion.Euler(randomSpread * Vector3.forward);
-
     }
 
     public override void DestoryWeapon()

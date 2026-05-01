@@ -21,8 +21,6 @@ public class PlayerWeapon : CharacterWeapon
     private Coroutine weaponCooutine;
     private ItemText weaponNameText;
 
-    
-
     protected override void Awake()
     {
         base.Awake();
@@ -93,6 +91,12 @@ public class PlayerWeapon : CharacterWeapon
         ResetWeaponForChange();
         ShowCurrentWeaponName();
         OnWeaponUIUdateEvent?.Invoke(currentWeapon);
+
+        // play switch sound
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySwitchGun();
+        }
     }
 
     private void RotatePlayerWeapon()
@@ -136,7 +140,6 @@ public class PlayerWeapon : CharacterWeapon
 
         return damage;
     }
-
 
     private void ShowCurrentWeaponName()
     {

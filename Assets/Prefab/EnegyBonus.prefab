@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyBonus
   moveSpeed: 8
-  energy: 4
+  energy: 10

@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashSpeed = 15f;
     [SerializeField] private float dashTime = 0.3f;
     [SerializeField] private float transperency = 0.3f;
+    [Tooltip("Seconds of cooldown after a dash before it can be used again.")]
+    [SerializeField] private float dashCooldown = 3f;
 
     public Vector2 MoveDirection => moveDirection;
     private SpriteRenderer spriteRenderer;
@@ -21,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection;
     private float currentSpeed;
     private bool usingDash;
+
+    // Track last time dash was used to enforce cooldown
+    private float lastDashTime = -Mathf.Infinity;
     
 
     private void Awake()
@@ -57,13 +62,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash()
     {
-        if (usingDash)
-        {
-            return; 
-        }
-        
+        // enforce both "not currently dashing" and "cooldown elapsed"
+        if (usingDash) return;
+        if (Time.time - lastDashTime < dashCooldown) return;
+
         usingDash = true;
-        StartCoroutine(routine:IEDash());
+        lastDashTime = Time.time;
+        StartCoroutine(IEDash());
     }
 
     private IEnumerator IEDash()

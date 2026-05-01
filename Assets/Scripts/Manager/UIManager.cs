@@ -29,6 +29,8 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private Image weaponIcon;
     [SerializeField] private TextMeshProUGUI weaponEnergyTMP;
 
+    
+
     // Update is called once per frames
     void Update()
     {
@@ -89,6 +91,8 @@ public class UIManager : Singleton<UIManager>
     {
         gameOverPanel.SetActive(true);
     }
+
+    
 
     private void OnEnable()
     {

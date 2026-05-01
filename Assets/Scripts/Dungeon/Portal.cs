@@ -9,10 +9,13 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            OnPortalEvent?.Invoke();
+            // play portal SFX
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayPortal();
+            }
 
+            OnPortalEvent?.Invoke();
         }
     }
-
-
 }

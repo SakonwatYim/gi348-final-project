@@ -7,5 +7,11 @@ public class CoinBonus : BonusBase
     protected override void GetBonus()
     {
         CoinManager.Instance.AddCoins(coinsToAdd);
+
+        // play get-coin SFX
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayGetCoin();
+        }
     }
 }
