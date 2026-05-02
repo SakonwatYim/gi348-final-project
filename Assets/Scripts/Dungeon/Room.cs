@@ -177,6 +177,12 @@ public class Room : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            // play entry room SFX
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayEntryRoom();
+            }
+
             if(OnPlayeEnterEvent != null)
             {
                 OnPlayeEnterEvent.Invoke(this);

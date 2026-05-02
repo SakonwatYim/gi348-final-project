@@ -265,6 +265,8 @@ MonoBehaviour:
   swithGun: {fileID: 8300000, guid: dcf4d1a34017ccf4c96c3a01023084ba, type: 3}
   getCoin: {fileID: 8300000, guid: 31379baa26e2fe741b2f7cb490c0a294, type: 3}
   openChest: {fileID: 8300000, guid: 32a6221ae12f81940a63fc9631e1e627, type: 3}
+  dash: {fileID: 8300000, guid: 0b18d6fb0b8e9134681eb359ceb96d1e, type: 3}
+  entryRoom: {fileID: 8300000, guid: aeaa401ffe4bb674d8b173ec66716d47, type: 3}
   musicSource: {fileID: 1979292954}
   sfxSource: {fileID: 528711414}
 --- !u!4 &145122001

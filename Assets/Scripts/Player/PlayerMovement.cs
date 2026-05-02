@@ -68,6 +68,13 @@ public class PlayerMovement : MonoBehaviour
 
         usingDash = true;
         lastDashTime = Time.time;
+
+        // play dash SFX
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayDash();
+        }
+
         StartCoroutine(IEDash());
     }
 

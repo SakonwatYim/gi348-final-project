@@ -15,6 +15,8 @@ public class AudioManager : PersistentSingleleton<AudioManager>
     [SerializeField] private AudioClip swithGun;
     [SerializeField] private AudioClip getCoin;
     [SerializeField] private AudioClip openChest;
+    [SerializeField] private AudioClip dash;
+    [SerializeField] private AudioClip entryRoom;
     
 
     [Header("Sources")]
@@ -117,4 +119,6 @@ public class AudioManager : PersistentSingleleton<AudioManager>
     public void PlaySwitchGun() => PlaySfx(swithGun);
     public void PlayGetCoin() => PlaySfx(getCoin);
     public void PlayOpenChest() => PlaySfx(openChest);
+    public void PlayDash() => PlaySfx(dash);
+    public void PlayEntryRoom() => PlaySfx(entryRoom);
 }

@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c310f1106c4c1b4790b1f6b0c70e252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionAttack
-  timeBtwAttacks: 1
+  timeBtwAttacks: 0.5
 --- !u!1 &6848363577840047595
 GameObject:
   m_ObjectHideFlags: 0

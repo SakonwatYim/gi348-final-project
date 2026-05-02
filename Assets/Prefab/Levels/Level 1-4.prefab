@@ -42,6 +42,7 @@ Transform:
   - {fileID: 2902895431628791240}
   - {fileID: 9003054356700716522}
   - {fileID: 6306418586574920284}
+  - {fileID: 8336787918141741404}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &203152369734241172
@@ -233,6 +234,76 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3332165896098186891, guid: 63b257307ef399a4395e0a5568be7c16, type: 3}
   m_PrefabInstance: {fileID: 465862224536935235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1690615045733334268
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2487222042122885000}
+    m_Modifications:
+    - target: {fileID: 6930749364874934749, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_Name
+      value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583499551401640532, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: predefineChest
+      value: 
+      objectReference: {fileID: 1819266769194068539, guid: baee3b937dad6544bad4a605e9d5463e, type: 3}
+    - target: {fileID: 7583499551401640532, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+      propertyPath: usePredefineChest
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+--- !u!4 &8336787918141741404 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7261066065827259808, guid: 15a3dfb0251bd5545b7adb8e49689673, type: 3}
+  m_PrefabInstance: {fileID: 1690615045733334268}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4599224034872846688
 PrefabInstance:
@@ -622,6 +693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2487222042122885000}
     m_Modifications:
+    - target: {fileID: -775175957979470975, guid: 252a426cc9230264db8e4df82d74f8c2, type: 3}
+      propertyPath: roomType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1057838004772956243, guid: 252a426cc9230264db8e4df82d74f8c2, type: 3}
       propertyPath: m_Name
       value: Room_1C_E (1)
